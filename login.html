@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="main-header">
+    <div style="display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:18px 0;">
+      <a href="home.html" style="text-decoration:none;color:#fb2424;font-size:2rem;font-weight:bold;letter-spacing:2px;">MangaVoid</a>
+    </div>
+    <hr style="border:0;border-top:1px solid #333;">
+  </header>
+  <form id="login-form">
+    <h2>Đăng nhập</h2>
+    <input type="text" id="username" placeholder="Tên đăng nhập" required>
+    <input type="password" id="password" placeholder="Mật khẩu" required>
+    <button type="submit">Đăng nhập</button>
+    <div id="login-error" style="color:red;margin-top:10px;"></div>
+  </form>
+  <script src="js/login.js"></script>
+</body>
+<footer id="main-footer" style="margin-top:40px;padding:18px 0;background:#23272f;text-align:center;color:#fbbf24;font-size:1rem;">
+  &copy; 2025 MangaVoid. Liên hệ: <a href="mailto:contact@mangavoid.com" style="color:#fb2424;text-decoration:none;">contact@mangavoid.com</a>
+</footer>
+</html>

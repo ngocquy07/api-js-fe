@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang web xem truyện</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    if (!localStorage.getItem('token')) {//kiểm tra token, nếu chưa đăng nhập thì chuyển sang login.html
+      window.location = 'login.html';
+    }
+  </script>
+</head>
+<body>
+  <header id="main-header">
+    <div style="display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:18px 0;">
+      <a href="home.html" style="text-decoration:none;color:#fb2424;font-size:2rem;font-weight:bold;letter-spacing:2px;">MangaVoid</a>
+    </div>
+    <hr style="border:0;border-top:1px solid #333;">
+  </header>
+  <h1>MangaVoid</h1>
+  <button id="logout-btn" style="position:absolute;top:20px;right:30px;">Đăng xuất</button>
+<form id="add-manga-form">
+  <input type="text" id="title" placeholder="title" required>
+  <input type="text" id="author" placeholder="author" required>
+  <input type="text" id="category" placeholder="thể loại" required>
+  <input type="text" id="description" placeholder="chi tiết" required>
+  <input type="file" id="image-file" accept="image/*" required>
+  <img id="preview-image" style="display:none; max-width:100px; max-height:150px; margin-top:10px;">
+  <button type="submit">Add</button>
+</form>
+  <div id="manga-list"></div>
+  <script>
+    document.getElementById('logout-btn').onclick = function() {
+      localStorage.removeItem('token');
+      window.location = 'home.html';
+    };
+  </script>
+  <script src="js/manga.js"></script>
+<footer id="main-footer" style="margin-top:40px;padding:18px 0;background:#23272f;text-align:center;color:#fbbf24;font-size:1rem;">
+  &copy; 2025 MangaVoid. Liên hệ: <a href="mailto:contact@mangavoid.com" style="color:#fb2424;text-decoration:none;">contact@mangavoid.com</a>
+</footer>
+</body>
